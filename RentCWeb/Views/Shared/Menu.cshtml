@@ -1,0 +1,19 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<center>
+    <div class="jumbotron">
+        <h5>Welcome to RentC, your brand new solution to manage and control your company's data without missing anything</h5>
+    </div>
+
+    <h2>Menu</h2>
+
+    <h3>@Html.ActionLink("Register New Car Rent", "RegisterNewCarRent", "Home")</h3>
+    <h3>@Html.ActionLink("Update Car Rent", "UpdateCarRent", "Home")</h3>
+    <h3>@Html.ActionLink("List Rents", "ListRents", "Home")</h3>
+    <h3>@Html.ActionLink("List Available Cars", "ListAvailableCars", "Home")</h3>
+    <h3>@Html.ActionLink("Register New Customer", "RegisterNewCustomer", "Home")</h3>
+    <h3>@Html.ActionLink("Update Customer", "UpdateCustomer", "Home")</h3>
+    <h3>@Html.ActionLink("List Customers", "ListCustomers", "Home")</h3>
+</center>

@@ -1,0 +1,35 @@
+﻿
+<center>
+    <h2>Rents List</h2>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <thead>
+            <tr>
+                @foreach (System.Data.DataColumn col in Model.Columns)
+                {
+                    <th> @col.Caption </th>
+                }
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (System.Data.DataRow row in Model.Rows)
+            {
+                <tr>
+                    @foreach (var cell in row.ItemArray)
+                    {
+                        <td> @cell.ToString() </td>
+                    }
+                </tr>
+            }
+        </tbody>
+    </table>
+
+
+    @using (Html.BeginForm("ListRents", "ListRents"))
+    {
+    <button type="submit" name="Button" value="All">Show All</button>
+    <button type="submit" name="Button" value="Active">Show Active</button>
+    <button type="submit" name="Button" value="Inactive">Show Inactive</button>
+    <button type="submit" name="Button" value="Deleted">Show Deleted</button>
+    <button type="submit" name="Button" value="Back">Back to Menu</button>
+    }
+</center>

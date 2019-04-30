@@ -1,0 +1,45 @@
+﻿
+@{
+    ViewBag.Title = "RegisterNewRent";
+}
+
+<center>
+    <h2>Register New Car Rent</h2>
+
+
+@model RentCWeb.Models.CarRent
+    
+    @using (Html.BeginForm("RegisterNewCarRent", "RegisterNewCarRent", FormMethod.Post))
+    {
+        <table>
+            <tr>
+                <td>@Html.LabelFor(model => model.Car.Plate, "Car Plate")</td>
+                <td>@Html.TextBoxFor(model => model.Car.Plate)</td>
+                <td>@Html.ValidationMessage("Plate")</td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(model => model.Reservation.CustomerID, "Client ID")</td>
+                <td>@Html.TextBoxFor(model => model.Reservation.CustomerID)</td>
+                <td>@Html.ValidationMessage("CustomerID")</td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(model => model.StartDate, "Start Date")</td>
+                <td>@Html.TextBoxFor(model => model.StartDate)</td>
+                <td>@Html.ValidationMessage("StartDate")</td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(model => model.EndDate, "End Date")</td>
+                <td>@Html.TextBoxFor(model => model.EndDate)</td>
+                <td>@Html.ValidationMessage("EndDate")</td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(model => model.Reservation.Location, "City")</td>
+                <td>@Html.TextBoxFor(model => model.Reservation.Location)</td>
+                <td>@Html.ValidationMessage("Location")</td>
+            </tr>
+        </table>
+    <button type="submit" name="Button" value="Submit">Submit</button>
+    <button type="submit" name="Button" value="Back">Back to Menu</button>
+    }
+            
+</center>
